@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 public class buyerMenu
 	{
-		public static ArrayList<Data> stock = new ArrayList<Data>();
+		static ArrayList<Item> stock = new ArrayList<Item>();
 		public static void main(String[] args)
 			{
 				fillStock();
@@ -66,7 +66,7 @@ public class buyerMenu
 										three = true;
 									}
 							}
-						stock.add(new Data(line.substring(0, x1), line.substring(x1+1, x2), Integer.parseInt(line.substring(x2+1, x3)), Integer.parseInt(line.substring(x3+1))));
+						stock.add(new Item(line.substring(0, x1), line.substring(x1+1, x2), Integer.parseInt(line.substring(x2+1, x3)), Integer.parseInt(line.substring(x3+1))));
 					}
 		            bufferedReader.close();
 				} 
